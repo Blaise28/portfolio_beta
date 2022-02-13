@@ -1,0 +1,690 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+html{
+   font-size: 62.5%;
+}
+html::-webkit-scrollbar {
+  width: 1.3rem;
+}
+html::-webkit-scrollbar-track {
+  background: var(--coul_princ);
+}
+html::-webkit-scrollbar-thumb {
+  background:#000;
+}
+body{
+    --coul_princ:#E3E3E3;
+    --black_nav: #313334;
+    --blue:#277A9C;
+    background-color: var(--coul_princ);
+    overflow-x: hidden;
+}
+/* preloader */
+.contener_loader{
+    position: fixed;
+    background: #E3E3E3;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+}
+.loader{
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 7px solid transparent;
+    border-radius: 50%;
+    border-top: 10px solid #277A9C;
+    border-right: 10px solid #277A9C;
+    border-bottom: 10px solid #277A9C;
+    animation: cool 2s linear infinite;
+}
+.loader::after,.loader::before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border:7px solid transparent;
+}
+.loader::before{
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-top: 10px solid #277A9C;
+    border-right: 10px solid #277A9C;
+    animation: cool 3s linear infinite;
+
+}
+ .loader::after{
+    top: 25px;
+    right: 25px;
+    left: 25px;
+    bottom: 25px;
+    border-top: 10px solid #277A9C;
+    animation: cool 1.5s linear infinite;
+}
+@keyframes cool{
+    to{
+        transform: rotate(0deg);
+    }
+    from{
+        transform: rotate(360deg);
+    }
+}
+.fondu_out{
+    z-index: -100;
+    opacity: 0;
+    transition: .5s ease-out;
+    width: 0;
+    height: 0;
+    display: none;
+}
+/* Fin preloader */
+nav{
+    width: 100%;
+    background-color: var(--black_nav);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    /*height: 5rem;*/
+    padding: 0 1.8rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+nav .logo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0.5rem;
+}
+nav .logo img{
+    width: 5.3rem;
+    height: 5rem;
+    border-radius: 10px;
+}
+nav .logo strong{
+    color: #fff;
+    font-family: 'Annie Use Your Telescope', cursive;
+    /* background-color: var(--blue); */
+    padding: 4px 6px;
+    margin-left:6px;
+}
+nav .logo strong a{
+    font-size: 2.7rem;
+    color: #fff;
+}
+.menu_close{
+    display: none;
+    color: #f14a4a;
+    font-size: 4.2rem;
+    display: flex;
+    justify-content: end;
+    margin: 2rem 5rem;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+nav ul .menu_close{
+    display: none;
+}
+nav ul li{
+    margin-right: 2rem;
+}
+#home{
+    background-color: var(--blue);
+    padding: .6rem;
+    border-radius: 6px;
+}
+.scroll_active{
+    background-color: var(--blue);
+    padding: .6rem;
+    border-radius: 6px;
+}
+nav ul li a{
+    color:#fff;
+    font-size: 1.9rem;
+    font-family: 'PT Serif', serif;
+    border-bottom: 3px solid var(--blue);
+    padding-bottom: 1rem;
+    transition: all .4s;
+}
+nav ul li a:hover{
+   background-color: var(--blue);
+    padding:.6rem;
+    border-radius: 6px;
+    border-bottom: none;
+}
+nav ul li a i{
+    font-size: 1.7rem;
+    margin-right: 0.5rem;
+}
+.sidebar{
+    display: none;
+}
+.sidebar .menu_open{
+    color: #fff;
+    font-size: 2.8rem;
+}
+/* End nav bar */
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(photos/The\ Glass\ Effect.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header div img{
+    width: 100%;
+    height: 100vh;
+}
+header .desc{
+    /*background:var(--black_nav);*/
+    background: linear-gradient(188deg,#313334,transparent);
+    box-shadow: 4px 4px 15px var(--blue);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /*
+    width: 65%;
+    height: 50%;
+    */
+    width: 85rem;
+    height: 34rem;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1.2rem;
+    font-family: 'Luxurious Roman', cursive;
+    color: #fff;
+}
+header .desc h1{
+    font-size: 6rem;
+    font-family: monospace;
+    text-shadow: 1px 3px var(--blue);
+    font-style: oblique;
+}
+header .desc p{
+        margin: 1.8rem 1.8rem 4rem;
+    font-size: 4.2rem;
+}
+header .desc a{
+    cursor: pointer;
+    background-color: var(--blue);
+    font-size: 2.2rem;
+    padding: 0.4em;
+    margin-top: 2.2rem;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    font-family: sans-serif;
+    color: #fff;
+}
+ .desc a:hover{
+    box-shadow: 0px 0px 10px #fff;
+}
+/*en header */
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:2rem 0;
+}
+.title h1{
+    font-family: 'Annie Use Your Telescope';
+    font-size: 4rem;
+    color: #fff;
+    background: var(--blue);
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+}
+.about{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+    overflow: hidden;
+}
+.about .image{
+    margin: 3rem 2rem 2rem 6rem;
+}
+.about .image img{
+    height: 32rem;
+    box-shadow: 3rem 3rem 0 rgb(0 0 0 / 10%);
+    width: 24rem;
+}
+.about .contenu_about{
+    /*margin: 0 12rem;*/
+    width: 60%;
+    font-size: 2.5rem;
+    font-family: serif;
+}
+.about .contenu_about h1{
+   text-align: center;
+    margin-bottom: 3rem;
+    background: var(--blue);
+    color: #fff;
+    padding: 2rem 0;
+}
+.about .contenu_about p{
+    color: var(--black_nav);
+    padding: 1.5rem;
+}
+/* End about */
+.services {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   /* flex-wrap: wrap;*/
+}
+.services .card_serv{
+    margin: 2rem 8rem;
+    font-size: 2rem;
+    background: #fff;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 5px;
+    max-width: 600px;
+    min-width: 280px;
+    position: relative;
+}
+/* .card_serv span{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.card_serv span:before{
+    position: absolute;
+    content: "";
+    width: 150%;
+    background: var(--blue);
+    height: 30%;
+    transform: rotate(-45deg) translateY(-28px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-family: fantasy;
+    font-size: 4.5rem;
+    overflow: hidden;
+    box-shadow: 0 5px 10px var(--black_nav);
+}
+.card_serv span:after{
+    content: "";
+    position: absolute;
+    width: 6.5%;
+    height: 7%;
+    background: var(--blue);
+    bottom: 7%;
+    left: 0;
+    z-index: -1;
+    box-shadow: 121px -122px var(--blue)
+}
+.card_serv .front:before{
+    content: "01";
+}
+.card_serv .back:before{
+    content: "02";
+}
+.card_serv .mobile:before{
+    content: "03";
+}
+.card_serv .front:after{
+    box-shadow: 122px -121px var(--blue);
+}
+.card_serv .back:after{
+    box-shadow: 128px -126px var(--blue);
+    bottom: 3%;
+}
+.card_serv .mobile:after{
+    bottom: 6%;
+    box-shadow: 113px -112px var(--blue);
+} */
+.services .card_serv h2{
+    text-align: center;
+    color: var(--blue);
+    padding: 1rem;
+    font-size: 4.5rem;
+}
+.services .card_serv h1{
+    margin: 2.2rem 0;
+} 
+.services .card_serv p{
+    font-size: 2rem;
+}
+/* End services */
+.skill{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.skills{
+    background: var(--black_nav);
+    width: auto;
+    height: auto;
+    margin: 2rem;
+    padding: 3.5rem;
+    color: #fff;
+    border-radius: 10px;
+}
+.skills li{
+    padding: .5rem;
+}
+.bar{
+    width: 31rem;
+    height: 0.8rem;
+    border: 1px solid var(--blue);
+    display: block;
+    border-radius: 7px;
+    overflow: hidden;
+}
+.bar span{
+    height: 0.8rem;
+    background: linear-gradient(45deg,var(--coul_princ), var(--blue));
+    float: left;
+}
+.lang_pourc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+.bar .html{
+    width: 90%;
+    animation: skill_html 3s ease-in;
+}
+.bar .css{
+    width: 70%;
+}
+.bar .javascript{
+    width: 30%;
+}
+.bar .java{
+    width: 60%;
+}
+@keyframes skill_html{
+    to{
+        width: 0%;
+    }
+    from{
+        width: 90%;
+    }
+}
+.skill .image img{
+    width: 33rem;
+    height: 23rem;
+    border-radius: 10px
+}
+/* End skills */
+.contact_form{
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--blue);
+}
+.contact_form .contact_input{
+    border: 1px solid #fff;
+    width: 28rem;
+    height: 2.4rem;
+    text-align: center;
+    border-radius: 10px;
+    margin: 1rem;
+}
+.contact_form div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#validation{
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 2rem;
+    border-radius: 50%;
+}
+.valide{
+    background: url(photos/valid.svg);
+    background-size: cover;
+}
+.invalide{
+    background: url(photos/invalid.svg);
+    background-size: cover;
+}
+.contact_form .contact_message{
+    border: 1px solid #fff;
+    width: 30rem;
+    height: 14rem;
+    border-radius: 10px;
+    margin: 1rem;
+    text-align: center;
+    padding: 0.4em;
+}
+.contact_bouton{
+    font-size: 2rem;
+    border: 1px solid var(--black_nav);
+    box-shadow: 0px 2px 10px var(--coul_princ);
+    border-radius: 5px;
+    background: var(--blue);
+    color: #fff;
+    padding: 0.4rem 0.6rem;
+    margin-bottom: 3rem;
+    font-family: monospace;
+    cursor: pointer;
+}
+/* End contact Form */
+footer{
+    background: var(--black_nav);
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px -4px 10px #fff;
+}
+.logo{
+    margin: .5rem;
+}
+.logo img{
+    width: 14rem;
+    height: 16rem;
+}
+.link{
+    margin: 1rem;
+}
+.link h1{
+    font-size: 3.2rem;
+    color: var(--coul_princ);
+    text-align: center;
+    border-bottom: 2px solid var(--blue);
+    padding-bottom: 0.5em;
+}
+.link a{
+   margin: 2rem 2rem;
+   overflow: hidden;
+}
+.link a i{
+    font-size: 2.9rem;
+    margin: 1.5rem 1rem;
+    color: var(--coul_princ);
+}
+.link a i:hover{
+    transform: scale(1.2);
+}
+.fa-facebook-f:hover{
+   color: var(--blue);
+}
+.fa-instagram:hover{
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+.cp_r{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3rem;
+    font-family: 'Annie Use Your Telescope';
+    color: var(--coul_princ);
+}
+.close_btn{
+    display: none;
+}
+.open_btn{
+    display: flex;
+}
+/* End footer */
+@media screen and (min-width: 990px) and ( max-width: 1250px){
+    .services .card_serv{
+        margin: 2rem;
+    }
+}
+@media screen and (max-width: 991px) {
+    header .desc{
+        width: 85%;
+        height: auto;
+    }
+    header .desc h1,
+    header .desc p{
+        font-size: 4.5rem;
+        line-height: 2;
+    }
+    .services {
+        /*display: block;*/
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .card_serv{
+        width: 50%;
+    }
+    .skill{
+        /*display: block;*/
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }  
+}
+@media screen and (max-width: 768px){
+    /* active nav bar */
+
+    .active{
+        position: fixed;
+        top: 0px;
+        left: 0;
+        background: var(--coul_princ);
+        z-index: 10000;
+        width: 45rem;
+        height: 100%;
+        display: block;
+        box-shadow: 0 0 0 100vw rgb(0 0 0 / 90%);
+        transition: .4s ease-in;
+    }
+   html{
+    font-size: 55%;
+   }
+   nav ul .menu_close{
+    display: flex;
+   }
+   nav ul{
+    position: fixed;
+    top: 0;
+    left: -110%;
+    background: var(--coul_princ);
+    z-index: 10000;
+    width: 45rem;
+    height: 100%;
+    display: block;
+    transition: .5s ease-out;
+   }
+   nav ul li{
+    text-align: center;
+    margin: 5rem;
+   }
+   nav ul li a{
+    font-size: 2.6rem;
+    color: var(--black_nav);
+   }
+   nav ul li a i{
+    font-size: 2.6rem;
+   }
+   nav .sidebar{
+    display: flex;
+   }
+    header{
+        background-image: url(photos/version_phone_0.svg);
+    }
+   .contenu_about{
+    font-size: 2.2rem;
+   }
+}
+@media(max-width: 700px){
+    header .desc{
+        width: 90%;
+    }
+    header .desc h1,
+    header .desc p{
+        font-size: 3.5rem;
+        line-height: 1.8;
+    }
+    .about{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .contenu_about{
+        min-width: 90%;
+    }
+}
+@media(max-width: 500px){
+    header .desc h1,
+    header .desc p{
+        font-size: 3rem;
+        line-height: 1.8;
+    }
+}
+@media (max-width: 450px)  {
+    html{
+        font-size: 45%;
+    }
+    header .desc h1,
+    header .desc p{
+        font-size:2.73rem;
+        line-height: 1.8;
+    }
+    .about{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .contenu_about{
+        min-width: 100%;
+    }
+    .logo img{
+        width: 10rem;
+        height: 11rem;
+    }
+    .link a{
+        margin: 2rem 1rem;
+    }
+    .link a i{
+        margin: 1.5rem 0;
+    }
+    .cp_r{
+        font-size: 2rem;
+    }
+}
