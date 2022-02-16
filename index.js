@@ -77,26 +77,11 @@ function succes(name){
 
 		}
 		// Start validation e-mail
-		const valid=document.getElementById("validation");
-		const regex_email=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-		let val;
-		function validation_email(input_email){
 
-			input_email.addEventListener("input",e=>{
+const icon_valid=document.querySelector(".valid");
+const icon_invalid=document.querySelector(".invalid");
+const regex_email=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-				if(input_email.value.match(regex_email)){
-					val=1;
-					valid.classList.add("valide");
-					valid.classList.remove("invalide");
-					}
-				else{
-					val=0;
-					valid.classList.add("invalide");
-					valid.classList.remove("valide");
-					}
-			});
-		}
-		
 		function Valide(){
 
 			const nom_prenom=document.querySelector(".name")
@@ -108,17 +93,18 @@ function succes(name){
 
 			mail.addEventListener("input",e=>{
 					if(mail.value.match(regex_email)){
-							valid.classList.add("valide");
-							valid.classList.remove("invalide");
+							icon_valid.style.display="flex";
+							icon_invalid.style.display="none";
 							rep=true;
 						}
 					else{
-							valid.classList.add("invalide");
-							valid.classList.remove("valide");
+							icon_invalid.style.display="flex";
+							icon_valid.style.display="none";
 							rep=false;
 						}
 					if(mail.value==""){
-						valid.classList.remove("invalide");
+						icon_valid.style.display="none";
+						icon_invalid.style.display="none";
 					}
 				});
 			bouton.addEventListener("click",(e)=>{
