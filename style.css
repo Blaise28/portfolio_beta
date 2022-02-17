@@ -107,19 +107,8 @@ nav .logo{
     margin: 0.5rem;
 }
 nav .logo img{
-    width: 11.3rem;
-    height: 6rem;
-}
-nav .logo strong{
-    color: #fff;
-    font-family: 'Annie Use Your Telescope', cursive;
-    /* background-color: var(--blue); */
-    padding: 4px 6px;
-    margin-left:6px;
-}
-nav .logo strong a{
-    font-size: 2.7rem;
-    color: #fff;
+    width: 12rem;
+    height: 4rem;
 }
 .menu_close{
     display: none;
@@ -150,7 +139,7 @@ nav ul li{
     padding: .6rem;
     border-radius: 6px;
 }
-nav ul li a{
+.nav_links{
     color:#fff;
     font-size: 1.9rem;
     font-family: 'PT Serif', serif;
@@ -158,13 +147,13 @@ nav ul li a{
     padding-bottom: 1rem;
     transition: all .4s;
 }
-nav ul li a:hover{
+.nav_links:hover{
    background-color: var(--blue);
     padding:.6rem;
     border-radius: 6px;
     border-bottom: none;
 }
-nav ul li a i{
+.nav_links i{
     font-size: 1.7rem;
     margin-right: 0.5rem;
 }
@@ -544,7 +533,6 @@ footer{
 }
 .fa-instagram:hover{
     background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-    -webkit-background-clip: text;
 }
 .cp_r{
     display: flex;
@@ -643,11 +631,11 @@ footer{
     text-align: center;
     margin: 5rem;
    }
-   nav ul li a{
+   .nav_links{
     font-size: 2.2rem;
     color: var(--black_nav);
    }
-   nav ul li a i{
+   .nav_links i{
     font-size: 2.3rem;
    }
    nav .sidebar{

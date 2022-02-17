@@ -45,28 +45,27 @@
     <nav>
         <div class="logo">
             <a href="#">
-            <img src="photos/logo.svg" alt="">
+            <img src="photos/logo.svg" alt="un logo qui represente MANIRAKIZA Blaise">
             </a>
-            <!--<strong><a href="#">M@Blaise</a></strong>-->
         </div>
         <ul>
             <label class="menu menu_close">
                     <i class="fas fa-times btn_close"></i>
             </label>
             <li>
-				<a href="#"> <i class="fas fa-home"></i>Acceuil</a>
+				<a href="#" class="nav_links"> <i class="fas fa-home"></i>Acceuil</a>
 			</li>
 			<li>
-				<a href="#about"><i class="fas fa-address-card"></i>Apropos</a>
+				<a href="#about" class="nav_links"><i class="fas fa-address-card"></i>Apropos</a>
 			</li>
 			<li>
-				<a href="#services"><i class="fas fa-laptop-code"></i></i>Services</a>
+				<a href="#services" class="nav_links"><i class="fas fa-laptop-code"></i></i>Services</a>
 			</li>
 			<li >
-				<a href="#skill"><i class="fas fa-code"></i>Competences</a>
+				<a href="#skill" class="nav_links"><i class="fas fa-code"></i>Competences</a>
 			</li>
 			<li>
-				<a href="#contact"><i class="far fa-envelope"></i>Contact</a>
+				<a href="#contact" class="nav_links"><i class="far fa-envelope"></i>Contact</a>
 			</li>
         </ul>
         <div class="sidebar">
@@ -78,7 +77,7 @@
     <!-- End navigation bar -->
     <header>
         <div class="desc">
-            <h1>Hello , <br>Je suis <span class="auto_input">MANIRAKIZA Blaise</span></h1>
+            <h1>Hello , <br>Je suis MANIRAKIZA Blaise</h1>
             <p>Un developpeur web et mobile</p>
             <a href="cv.html">Voir mon CV</a>
         </div>
@@ -91,7 +90,7 @@
     </div>
     <section class="about" >
         <div class="image">
-            <img src="photos/cool.jpg">
+            <img src="photos/cool.jpg" alt="Ma photo de profil">
         </div>
         <div class="contenu_about">
             <h2>Je suis MANIRAKIZA Blaise</h2>
@@ -151,35 +150,41 @@
                         <h2>HTML</h2>
                         <h3>90%</h3>
                     </div>
-                    <span class="bar"><span class="html"></span></span>
+                    <span class="bar">
+                        <span class="html"></span>
+                    </span>
                 </li>
                 <li>
                     <div class="lang_pourc">
                         <h2>CSS</h2>
                         <h3>70%</h3>
                     </div>
-                    <span class="bar"><span class="css"></span></span>
+                    <span class="bar">
+                        <span class="css"></span>
+                    </span>
                 </li>
                 <li>
                     <div class="lang_pourc">
                         <h2>JavaScript</h2>
                         <h3>30%</h3>
                     </div>
-                    <span class="bar"><span class="javascript"></span></span>
+                    <span class="bar">
+                        <span class="javascript"></span>
+                    </span>
                 </li>
                 <li>
                     <div class="lang_pourc">
                         <h2>Java</h2>
                         <h3>60%</h3>
                     </div>
-                    <span class="bar"><span class="java"></span></span>
+                    <span class="bar">
+                        <span class="java"></span>
+                    </span>
                 </li>
-            </div>
-            
+            </div>        
             <div class="image">
-                <img src="photos/code.jpg" alt="image_code">
+                <img src="photos/code.jpg" alt="une image qui represente une personne qui est entre de programme">
             </div>
-            
     </section>
 
     <!-- End skill -->
@@ -188,7 +193,6 @@
         <h2>Contact</h2>
     </div>
     <section class="contact" >
-
         <form class="contact_form">
             <input type="text" name="" placeholder="Votre nom" class="contact_input name" id="nom_prenom" required>
             <div>
@@ -198,18 +202,17 @@
                     <i class="fas fa-times-circle invalid"></i>
                 </span>
             </div>
-
             <textarea rows="6" cols="0" class="contact_message message" placeholder="Message" id="message"></textarea>
-
             <button class="contact_bouton btn_envoye" id="btn_envoye">Envoyer</button>
         </form>
     </section>
 
     <!-- End contact form -->
+    
     <footer>
         <div class="logo">
             <a href="#">
-                <img src="photos/logo.svg">
+                <img src="photos/logo.svg" alt="un logo qui represente Manirakiza Blaise">
             </a>
         </div>
         <div class="link">
@@ -230,8 +233,11 @@
         </div>
     </footer>
 
+    <!-- End footer and Ending html -->
+
+    <!-- JavaScript -->
+
     <script src="index.js" ></script>
-    
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
