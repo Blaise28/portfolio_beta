@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- balise meta -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta property="og:image" content="photos/cool.jpg">
+    <meta property="og:type" content="Portfolio">
+    <meta property="og:description" content="Mon Portfolio de developpeur web et mobile">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Manirakiza Blaise">
+
     <title>ManirakizaBlaise.me</title>
+    <link rel="stylesheet" href="style.css">
 
     <!-- font awesome -->
-
+    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet">
+    
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_port/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_port/favicon-32x32.png">
@@ -21,6 +30,7 @@
     <link rel="mask-icon" href="favicon_port/safari-pinned-tab.svg" color="#277a9c">
     <meta name="msapplication-TileColor" content="#277a9c">
     <meta name="theme-color" content="#277a9c">
+
 </head>
 <body>
     <!-- preloader -->
@@ -35,28 +45,27 @@
     <nav>
         <div class="logo">
             <a href="#">
-            <img src="photos/logo.svg" alt="">
+            <img src="photos/logo.svg" alt="un logo qui represente MANIRAKIZA Blaise">
             </a>
-            <!--<strong><a href="#">M@Blaise</a></strong>-->
         </div>
         <ul>
             <label class="menu menu_close">
                     <i class="fas fa-times btn_close"></i>
             </label>
             <li>
-				<a href="#"> <i class="fas fa-home"></i>Acceuil</a>
+				<a href="#" class="nav_links"> <i class="fas fa-home"></i>Acceuil</a>
 			</li>
 			<li>
-				<a href="#about"><i class="fas fa-address-card"></i>Apropos</a>
+				<a href="#about" class="nav_links"><i class="fas fa-address-card"></i>Apropos</a>
 			</li>
 			<li>
-				<a href="#services"><i class="fas fa-laptop-code"></i></i>Services</a>
+				<a href="#services" class="nav_links"><i class="fas fa-laptop-code"></i></i>Services</a>
 			</li>
 			<li >
-				<a href="#skill"><i class="fas fa-code"></i>Competences</a>
+				<a href="#skill" class="nav_links"><i class="fas fa-code"></i>Competences</a>
 			</li>
 			<li>
-				<a href="#contact"><i class="far fa-envelope"></i>Contact</a>
+				<a href="#contact" class="nav_links"><i class="far fa-envelope"></i>Contact</a>
 			</li>
         </ul>
         <div class="sidebar">
@@ -67,29 +76,24 @@
     </nav>
     <!-- End navigation bar -->
     <header>
-        <!--
-        <div>
-            <img src="photos/The\ Glass\ Effect.svg" alt="">
-        </div>
-        -->
         <div class="desc">
-            <h1>Hello , <br>Je suis <span class="auto_input">MANIRAKIZA Blaise</span></h1>
+            <h1>Hello , <br>Je suis MANIRAKIZA Blaise</h1>
             <p>Un developpeur web et mobile</p>
-            <a href="cv.pdf">Voir mon CV</a>
+            <a href="cv.html">Voir mon CV</a>
         </div>
     </header>
     
     <!-- End header -->
 
     <div class="title" id="about">
-        <h1>Apropos de Moi !</h1>
+        <h2>Apropos de Moi !</h2>
     </div>
     <section class="about" >
         <div class="image">
-            <img src="photos/cool.jpg">
+            <img src="photos/cool.jpg" alt="Ma photo de profil">
         </div>
         <div class="contenu_about">
-            <h1>Je suis MANIRAKIZA Blaise</h1>
+            <h2>Je suis MANIRAKIZA Blaise</h2>
             <p>Ingenieur en Genie Logiciel et en Reseaux-Informatique,<br>De nationalite Burundaise ,Agee de 21ans, Celibataire.
             Aujourd'hui je travaille principalement sur tous les projets de développement web(html,css,javascript,javaEE) et mobile(java).
             </p>
@@ -99,29 +103,35 @@
     <!-- End about -->
 
     <div class="title" id="services">
-        <h1>Services</h1>
+        <h2>Services</h2>
     </div>
     <section class="services">
        <div class="card_serv">
-            <!-- <span class="front"></span> -->
-            <h2>01</h2>
-            <h1>Developpement Frontend</h1>
-            <p>Création des wireframes(schemas), maquettes, interfaces et code optimise pour facilite l’accès des utilisateurs au contenu.
-                </p>    
+            <h3>01</h3>
+             <span>
+                <i class="fas fa-desktop"></i>
+            </span>
+            <h2>Developpement Frontend</h2>
+            <p>Implementation d'une maquette et code optimise pour facilite l’accès des utilisateurs au contenu.
+            </p>    
         </div>
         <div class="card_serv">
-                <!-- <span class="back"></span>-->
-                <h2>02</h2>     
-                <h1>Developpement Backend</h1>
+                <h3>02</h3> 
+                <span>
+                    <i class="fas fa-mobile-alt"></i>
+                </span>    
+                <h2>Developpement Backend</h2>
                 <p>
                 Concevoir des techniques pour le bon fonctionnement d'un site . Architecture de la plateforme de gestion de contenus.
                     Controle de qualites
                 </p> 
         </div>
         <div class="card_serv">
-            <!-- <span class="mobile"></span> -->
-            <h2>03</h2>
-            <h1>Developpement Mobile</h1>
+            <h3>03</h3>
+            <span>
+                <i class="fas fa-mobile-alt"></i>
+            </span>
+            <h2>Developpement Mobile</h2>
             <p>
                 Creation des applications mobile(Smart_phone,tablette) compatible avec le systeme et la version . 
             </p>   
@@ -131,80 +141,82 @@
     <!-- End services -->
 
     <div class="title" id="skill">
-        <h1>Mes competences</h1>
+        <h2>Mes competences</h2>
     </div>
     <section class="skill">
             <div class="skills">
                 <li>
                     <div class="lang_pourc">
-                        <h1>HTML</h1>
-                        <h2>90%</h2>
+                        <h2>HTML</h2>
+                        <h3>90%</h3>
                     </div>
-                    <span class="bar"><span class="html"></span></span>
+                    <span class="bar">
+                        <span class="html"></span>
+                    </span>
                 </li>
                 <li>
                     <div class="lang_pourc">
-                        <h1>CSS</h1>
-                        <h2>70%</h2>
+                        <h2>CSS</h2>
+                        <h3>70%</h3>
                     </div>
-                    <span class="bar"><span class="css"></span></span>
+                    <span class="bar">
+                        <span class="css"></span>
+                    </span>
                 </li>
                 <li>
                     <div class="lang_pourc">
-                        <h1>JavaScript</h1>
-                        <h2>30%</h2>
+                        <h2>JavaScript</h2>
+                        <h3>30%</h3>
                     </div>
-                    <span class="bar"><span class="javascript"></span></span>
+                    <span class="bar">
+                        <span class="javascript"></span>
+                    </span>
                 </li>
                 <li>
                     <div class="lang_pourc">
-                        <h1>Java</h1>
-                        <h2>60%</h2>
+                        <h2>Java</h2>
+                        <h3>60%</h3>
                     </div>
-                    <span class="bar"><span class="java"></span></span>
+                    <span class="bar">
+                        <span class="java"></span>
+                    </span>
                 </li>
-            </div>
-            
+            </div>        
             <div class="image">
-                <img src="photos/code.jpg" alt="image_code">
+                <img src="photos/code.jpg" alt="une image qui represente une personne qui est entre de programme">
             </div>
-            
     </section>
 
     <!-- End skill -->
 
     <div class="title" id="contact">
-        <h1>Contact</h1>
+        <h2>Contact</h2>
     </div>
     <section class="contact" >
-
         <form class="contact_form">
             <input type="text" name="" placeholder="Votre nom" class="contact_input name" id="nom_prenom" required>
             <div>
                  <input type="email" name="" placeholder="Votre e-mail" class="contact_input mail" id="email" required="">
                  <span id="validation" class="">
-                    <!--
-                     <i class="fa-solid fa-circle-check"></i>
-                     <i class="fa-solid fa-circle-xmark"></i>
-                 -->
-                 </span>
+                    <i class="fas fa-check-circle valid"></i>
+                    <i class="fas fa-times-circle invalid"></i>
+                </span>
             </div>
-
             <textarea rows="6" cols="0" class="contact_message message" placeholder="Message" id="message"></textarea>
-
             <button class="contact_bouton btn_envoye" id="btn_envoye">Envoyer</button>
         </form>
     </section>
 
     <!-- End contact form -->
+    
     <footer>
         <div class="logo">
             <a href="#">
-                <img src="photos/logo.svg">
+                <img src="photos/logo.svg" alt="un logo qui represente Manirakiza Blaise">
             </a>
         </div>
         <div class="link">
-            <h1>Autre lien</h1>
+            <h2>Autre lien</h2>
             <a class="footer_btn" href="#">
                 <i class="fab fa-facebook-f"></i>
             </a>
@@ -216,13 +228,16 @@
             </a>
         </div>
         <div class="cp_r">
-            <h3 class="cp_r"><i class="far fa-copyright"></i> 
+            <h3><i class="far fa-copyright"></i> 
             Copyright 2022</h3>
         </div>
     </footer>
 
+    <!-- End footer and Ending html -->
+
+    <!-- JavaScript -->
+
     <script src="index.js" ></script>
-    
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
