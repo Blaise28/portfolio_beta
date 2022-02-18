@@ -144,6 +144,7 @@ body{
     border-radius: 10px;
 }
 .btn_download{
+    position: relative;
     background: var(--blue);
     text-align: center;
     padding: 1rem;
@@ -151,8 +152,10 @@ body{
     margin: auto;
     cursor: pointer;
     box-shadow: 2px 3px 10px #000;
-    position: relative;
     overflow: hidden;
+    margin-top: 2rem;
+    border-radius: 5px;
+
 }
 .btn_download a{
     font-size: 3rem;
@@ -163,7 +166,7 @@ body{
     overflow: hidden;
 }
 .btn_download a::before{
-        content: "";
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -248,9 +251,12 @@ body{
 .lang ul{
     display: flex;
     margin: 0 0 4rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .lang ul li{
-    margin: 0 3rem;
+    margin: 1rem 3rem;
     font-size: 2.3rem;
     border-bottom: 3px solid var(--blue);
     padding-bottom: 1rem;
@@ -270,7 +276,7 @@ body{
     margin-top: 2.5rem;
 }
 .all_card li{
-    margin: 0 2rem;
+    margin: 0 2rem 2rem;
     border: 1px solid var(--blue);
     padding: 1.2rem 2.2rem;
     background: var(--coul_princ);
@@ -311,13 +317,170 @@ body{
 }
 .interet ul{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
-.interet ul li{
+.list_interet{
     font-size: 1.8rem;
-    list-style: disc;
-    margin: 0 3rem;
+    margin: 1rem 3rem;
     font-family: fantasy;
     color: var(--black_nav);
     border-bottom: 2px solid var(--black_nav);
     padding-bottom: 0.5rem;
+}
+.list_interet i{
+    margin-right: 1rem;
+}
+.small_screen{
+    display: none;
+}
+@media screen and (max-width: 991px) {
+    .image{
+        width:90%;
+    }
+    .image img{
+        width: 10rem;
+        height: 11rem;
+    }
+    .image h1{
+        font-size: 1.8rem;
+    }
+    .image h2{
+        font-size: 1.5rem;
+    }
+    .titre_profile{
+        max-width: 90%;
+    }
+    .about_profile p{
+        font-size: 1.5rem;
+        margin: 1.5rem 0;
+        padding: 0;
+    }
+    .btn_download{
+        width:95%;
+    }
+    .btn_download a{
+        font-size: 2.7rem;
+    }
+     /* 2em partie */
+    .titre{
+        font-size: 2.2rem;
+        padding: 1rem 5rem;
+        margin-bottom: 1rem;
+    }
+    .education .contenu{
+        margin: 0.7rem;
+        padding: 0.5rem;
+    }
+    .contenu h3{
+        font-size: 1.5rem;
+    }
+
+    .all_card li{
+        margin: 0 2rem 1rem;
+        padding: 1rem 2rem;
+    }
+    .all_card li span{
+        font-size: 2rem;
+    }
+    .list_interet{
+        font-size: 1.5rem;
+        margin: .5rem 1rem;
+    }
+}
+@media screen and (max-width: 768px){
+    .contener_grille{
+        display: block;
+    }
+    .image{
+        width: auto;
+    }
+    .image img{
+        width: 12rem;
+        height: 13rem;
+    }
+    .image h1{
+        font-size: 2.5rem;
+    }
+    .image h2{
+        font-size: 2rem;
+    }
+    .titre_profile{
+        width: 50%;
+    }
+    .about_profile p{
+        padding: 0 1rem;
+        font-size: 1.5rem;
+    }
+    .lang ul li{
+        margin: 1rem 2rem 0;
+    }
+    .all_card li{
+        margin: 0px 0.3rem 1rem;
+    }
+    .all_card li span{
+        font-size: 2rem;
+    }
+    .all_card  li i,
+    .all_card .fa-css3,
+    .all_card .fa-java{
+            font-size: 4rem;
+    }
+    .all_card .fa-sass{
+        font-size: 5rem;
+    }
+    .all_card .fa-js{
+        font-size: 6rem  
+    }
+    .btn_download{
+        width: 60%;
+    }
+    .large_screen{
+        display: none;
+    }
+    .small_screen{
+        display: block;
+    }
+}
+@media screen and (max-width: 500px){
+    html{
+        font-size: 55%;
+    }
+    .image{
+        width: 100%;
+        padding: 0;
+    }
+    .titre_profile{
+        width: auto;
+    }
+    .about_profile p{
+        font-size: 1.8rem;
+    }
+    .card{
+        flex-direction: column;
+    }
+    .lang ul li{
+        margin: 1rem 1.55rem;
+    }
+    .all_card li{
+        margin: 0px .3rem 1rem;
+    }
+    .all_card li span{
+        font-size: 1.5rem;
+    }
+    .all_card  li i,
+    .all_card .fa-css3,
+    .all_card .fa-java{
+        font-size: 3rem;
+    }
+    .all_card .fa-sass{
+        font-size: 4rem;
+    }
+    .all_card .fa-js{
+        font-size: 5rem;
+    }
+    .btn_download{
+        width:75%;
+    }
 }
