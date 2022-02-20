@@ -282,7 +282,7 @@ header .desc a{
     min-width: 280px;
     position: relative;
 }
-.card_serv span{
+/*.card_serv span{
     width: 50%;
     height: 50%;
     position: absolute;
@@ -341,6 +341,7 @@ header .desc a{
     bottom: 6%;
     box-shadow: 113px -112px var(--blue);
 } 
+*/
 .services .card_serv h3{
     text-align: center;
     color: var(--blue);
