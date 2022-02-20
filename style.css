@@ -45,7 +45,7 @@ body{
     border-top: 10px solid #277A9C;
     border-right: 10px solid #277A9C;
     border-bottom: 10px solid #277A9C;
-    animation: cool 2s linear infinite;
+    animation: rotation_anim 2s linear infinite;
 }
 .loader::after,.loader::before{
     content: "";
@@ -60,7 +60,7 @@ body{
     bottom: 10px;
     border-top: 10px solid #277A9C;
     border-right: 10px solid #277A9C;
-    animation: cool 3s linear infinite;
+    animation: rotation_anim 3s linear infinite;
 
 }
  .loader::after{
@@ -69,9 +69,9 @@ body{
     left: 25px;
     bottom: 25px;
     border-top: 10px solid #277A9C;
-    animation: cool 1.5s linear infinite;
+    animation: rotation_anim 1.5s linear infinite;
 }
-@keyframes cool{
+@keyframes rotation_anim{
     to{
         transform: rotate(0deg);
     }
@@ -282,12 +282,12 @@ header .desc a{
     min-width: 280px;
     position: relative;
 }
-/* .card_serv span{
+.card_serv span{
     width: 50%;
     height: 50%;
     position: absolute;
-    top: -10px;
-    left: -10px;
+    top: -1%;
+    left: -1%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -295,7 +295,7 @@ header .desc a{
 }
 .card_serv span:before{
     position: absolute;
-    content: "";
+    content: "01";
     width: 150%;
     background: var(--blue);
     height: 30%;
@@ -340,7 +340,7 @@ header .desc a{
 .card_serv .mobile:after{
     bottom: 6%;
     box-shadow: 113px -112px var(--blue);
-} */
+} 
 .services .card_serv h3{
     text-align: center;
     color: var(--blue);
@@ -591,6 +591,12 @@ footer{
         justify-content: center;
     }  
 }
+@media screen and (max-width: 991px) and (min-width: 600px){
+    .card_serv span{
+        width: 32%;
+        height: 58%;
+    }   
+}
 @media screen and (max-width: 768px){
     /* active nav bar */
 
@@ -608,6 +614,10 @@ footer{
     }
    html{
     font-size: 55%;
+   }
+   .loader{
+        width: 120px;
+        height: 120px;
    }
    nav ul .menu_close{
     display: flex;
@@ -667,7 +677,7 @@ footer{
 }
 @media screen and (max-width: 700px){
     header .desc{
-       font-size: ;
+       padding: 0;
     }
     header .desc h1,
     header .desc p{
