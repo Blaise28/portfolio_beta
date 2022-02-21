@@ -739,7 +739,9 @@ footer{
         padding: 1rem 1rem;
         font-size: 2rem;
     }
-
+    .contact_form .contact_input{
+        font-size: 1.8rem;
+    }
     .logo img{
         width: 8rem;
         height: 11rem;
