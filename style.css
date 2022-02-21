@@ -715,6 +715,18 @@ footer{
     html{
         font-size: 45%;
     }
+    .loader{
+        border-top: 6px solid #277A9C;
+        border-right: 6px solid #277A9C;
+        border-bottom: 6px solid #277A9C;
+    }
+    .loader::before{
+        border-top: 6px solid #277A9C;
+        border-right: 6px solid #277A9C;
+    }
+    .loader::after{
+        border-top: 6px solid #277A9C;
+    }
     header .desc h1,
     header .desc p{
         font-size: 3.5rem;
