@@ -128,7 +128,9 @@ body{
 }
 .contact_info h4{
     margin-left: 1rem;
-    font-family: cursive;
+    font-family: serif;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
 }
 .social{
     display: flex;
