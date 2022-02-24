@@ -340,8 +340,8 @@ header .desc a{
 .card_serv .mobile:after{
     bottom: 6%;
     box-shadow: 113px -112px var(--blue);
-} 
-*/
+<<<<<<< HEAD
+} */
 .services .card_serv h3{
     text-align: center;
     color: var(--blue);
@@ -476,6 +476,11 @@ header .desc a{
     padding: 0.4em;
     font-size: 2rem;
     outline: none;
+}
+.contact_input:focus,
+.contact_message:focus{
+    transform: scale(1.1);
+    box-shadow: 6px 5px 2px var(--black_nav)
 }
 .contact_bouton{
     font-size: 2.2rem;
@@ -680,6 +685,7 @@ footer{
 @media screen and (max-width: 700px){
     header .desc{
        padding: 3rem 0;
+       width: 98%;
     }
     header .desc h1,
     header .desc p{
@@ -694,6 +700,7 @@ footer{
     .contenu_about{
         min-width: 90%;
     }
+
 }
 @media screen and (max-width: 500px){
     header .desc h1,
