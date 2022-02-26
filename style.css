@@ -490,7 +490,7 @@ header .desc a{
     background: var(--blue);
     color: #fff;
     padding: 0.5rem 0.7rem;
-    margin-bottom: 3rem;
+    margin: 2rem 0 3rem;
     font-family: monospace;
     cursor: pointer;
 }
