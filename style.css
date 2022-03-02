@@ -272,13 +272,13 @@ header .desc a{
    /* flex-wrap: wrap;*/
 }
 .services .card_serv{
-    margin: 2rem 8rem;
+    margin: 2rem auto;
     font-size: 2rem;
     background: #fff;
     padding: 2rem;
     text-align: center;
     border-radius: 5px;
-    max-width: 600px;
+    max-width: 30%;
     min-width: 280px;
     position: relative;
 }
@@ -555,11 +555,6 @@ footer{
     display: flex;
 }
 /* End footer */
-@media screen and (min-width: 990px) and ( max-width: 1250px){
-    .services .card_serv{
-        margin: 2rem;
-    }
-}
 @media screen and (max-width: 991px) {
     header .desc{
         width: 95%;
