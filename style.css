@@ -450,11 +450,11 @@ header .desc a{
 }
 #validation{
     position: absolute;
-    right: -2rem;
+    right: -3.5rem;
 }
 #validation .valid,
 #validation .invalid{
-    font-size: 2rem;
+    font-size: 2.5rem;
     border-radius: 50%;
     display: none;
 }
@@ -524,18 +524,17 @@ footer{
    overflow: hidden;
 }
 .link a i{
-    font-size: 2.9rem;
+    font-size: 4rem;
     margin: 1.5rem 1rem;
     color: var(--coul_princ);
+    transform: scale(1.0);
+    transition: transform ease-in .3s;
 }
 .link a i:hover{
     transform: scale(1.2);
 }
-.fa-facebook-f:hover{
-   color: var(--blue);
-}
-.fa-instagram:hover{
-    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+.fa-linkedin:hover{
+    background:var(--blue);
 }
 .cp_r{
     display: flex;
@@ -768,7 +767,7 @@ footer{
         font-size: 2.2rem;
     }
     .link a i{
-        font-size: 3.6rem;
+        font-size: 4.3rem;
     }
     .cp_r h3{
         font-size: 2rem;
