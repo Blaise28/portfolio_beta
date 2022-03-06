@@ -528,7 +528,7 @@ footer{
     margin: 1.5rem 1rem;
     color: var(--coul_princ);
     transform: scale(1.0);
-    transition: transform ease-in .3s;
+    transition: transform linear .1s ;
 }
 .link a i:hover{
     transform: scale(1.2);
