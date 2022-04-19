@@ -381,7 +381,7 @@ header .desc a{
 }
 .bar{
     width: 31rem;
-    height: 0.8rem;
+    height: 1rem;
     border: 1px solid var(--blue);
     display: block;
     border-radius: 7px;
@@ -397,6 +397,7 @@ header .desc a{
     justify-content: space-between;
     align-items: center;
     margin: 1rem;
+    font-size: 1.3rem;
 }
 .bar .html{
     width: 90%;
