@@ -494,12 +494,6 @@ footer {
   .card_serv {
     width: 50%;
   }
-  .skill {
-    /*display: block;*/
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
 }
 @media screen and (max-width: 991px) and (min-width: 600px) {
   .card_serv span {

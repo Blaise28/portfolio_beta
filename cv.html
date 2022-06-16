@@ -104,28 +104,11 @@
                     <li>Swahili</li>
                 </ul>
             </div>
-            <div class="skills">
+            <div class="skills_contener">
                 <h2 class="titre">Compétences</h2>
-                <ul class="all_card">
-                    <li>
-                        <span>HTML</span>
-                        <i class="fab fa-html5"></i>
-                    </li>
-                    <li>
-                        <span>CSS</span>
-                        <i class="fab fa-css3"></i>       
-                    </li>
-                    <li>       
-                        <i class="fab fa-sass"></i>
-                    </li>
-                    <li>        
-                        <i class="fab fa-js"></i>
-                    </li>
-                    <li>
-                        <span>Java</span>
-                        <i class="fab fa-java"></i>
-                    </li>
-                </ul>
+                <div class="skill">
+
+                </div>
             </div>
             <div class="interet">
                 <h1 class="titre">Centre d'intérèt</h1>
@@ -141,5 +124,42 @@
             </div>
         </main>
     </section>
+
+    <script>
+const tech_name = [
+  "html",
+  "css",
+  "sass",
+  "bootstrap",
+  "javascript",
+  "github",
+  "mysql",
+  "vscode",
+];
+const contener_skills = document.querySelector(".skill");
+
+function create_element(element_html) {
+  return document.createElement(element_html);
+}
+
+function create_skills(tech_name, contener_skills) {
+  tech_name.forEach((name_tech) => {
+    const cont_tech = create_element("div");
+    cont_tech.setAttribute("class", "cont_tech_logo");
+    const img = create_element("img");
+    img.setAttribute("src", `./tech_logos/${name_tech}.svg`);
+    const title = create_element("h3");
+    let text_node = document.createTextNode(`${name_tech}`);
+    title.appendChild(text_node);
+
+    cont_tech.appendChild(img);
+    cont_tech.appendChild(title);
+
+    contener_skills.appendChild(cont_tech);
+  });
+}
+
+create_skills(tech_name,contener_skills);
+    </script>
 </body>
 </html>
