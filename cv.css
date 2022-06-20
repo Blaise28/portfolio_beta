@@ -433,14 +433,14 @@ body {
 }
 @media screen and (max-width: 450px) {
   .skill .cont_tech_logo {
-    width: 40%;
+    width: 35%;
   }
   .cont_tech_logo img {
     width: 7rem;
     height: auto;
   }
   .cont_tech_logo h3 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 500px) {
