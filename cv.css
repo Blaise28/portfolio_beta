@@ -133,7 +133,12 @@ body {
   margin-left: 1rem;
   font-family: serif;
   font-size: 1.6rem;
-  letter-spacing: 1px;
+}
+.num_tel, 
+.my_mail{
+  cursor: pointer;
+  letter-spacing: 2px;
+  border-bottom: 3px dotted var(--blue);
 }
 .social {
   display: flex;

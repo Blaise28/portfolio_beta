@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Un portfolio de Manirakiza Blaise un Developpeur web et mobile">
+    <meta name="description" content="Un portfolio de Manirakiza Blaise un Developpeur web ">
     
     <!-- font awesome -->
 
@@ -31,7 +31,7 @@
             <div class="image">
                 <img src="photos/passport.jpg" alt="une photo de Moi">
                 <h1>Manirakiza Blaise</h1>
-                <h2>Developpeur frontend et mobile</h2>  
+                <h2>Developpeur frontend </h2>  
 
                 <div class="link">
                     <a href="https://github.com/blaise28/">
@@ -46,7 +46,9 @@
             <div class="about_profile">
                 <h2 class="titre_profile">profile</h2>
                 <p>
-                    Développeur frontend et mobile pendant un an. J’adore l’informatique et tous ce qui concerne un ordinateur. Un esprit saint dans corps saint pour atteindre un objectif ensemble.
+                    Développeur frontend  pendant un an. 
+                    J’adore l’informatique et tous ce qui concerne un ordinateur.
+                    Passionne par la programmation ainsi que les defis.
                 </p>
             </div>
             </div>
@@ -58,11 +60,11 @@
                 </span>
                 <span class="contact_info">
                     <i class="fas fa-phone-alt"></i>
-                    <h4>+257222422</h4>
+                    <h4 class="num_tel">+257 72148589</h4>
                 </span>
                 <span class="contact_info">
                     <i class="far fa-envelope"></i>
-                    <h4>manirakizablaise3@gmail.com</h4>
+                    <h4 class="my_mail">manirakizablaise3@gmail.com</h4>
                 </span>
             </div>
             
@@ -160,6 +162,26 @@ function create_skills(tech_name, contener_skills) {
 }
 
 create_skills(tech_name,contener_skills);
+
+const number=document.querySelector(".num_tel");
+const email=  document.querySelector(".my_mail");
+
+function copier_element (element){
+    
+    element.addEventListener("click",(e)=>{
+        let old_value =e.target.textContent;
+        navigator.clipboard.writeText(old_value);
+        element.innerText="Copie";
+        console.log(old_value);
+        setTimeout(() => {
+            element.innerText=old_value;
+        }, 1000);
+    });
+    
+}
+
+copier_element(number);
+copier_element(email);
     </script>
 </body>
 </html>
