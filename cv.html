@@ -46,25 +46,37 @@
             <div class="about_profile">
                 <h2 class="titre_profile">profile</h2>
                 <p>
-                    Développeur frontend  pendant un an. 
-                    J’adore l’informatique et tous ce qui concerne un ordinateur.
-                    Passionne par la programmation ainsi que les defis.
+                    Développeur frontend  pendant une année.
+                    J'adore les ordinateurs et tout ce qui a à voir avec les ordinateurs.
+                    Passionné de la programmation et des challenges.
                 </p>
             </div>
             </div>
             <div class="contact">
                 <h2 class="titre_profile">Mes Coordonnées </h2>
                 <span class="contact_info">
-                    <i class="fas fa-map-marker-alt"></i>
+                    <i class="fas fa-map-marker-alt primary_logo"></i>
                     <h4>Bujumbura/Burundi</h4>
                 </span>
                 <span class="contact_info">
-                    <i class="fas fa-phone-alt"></i>
-                    <h4 class="num_tel">+257 72148589</h4>
+                    <i class="fas fa-phone-alt primary_logo"></i>
+                    <span class="num_tel">
+                        <h4>+257 72148589</h4>
+                        <div class="contener_logo_copy">
+                            <i class="fas fa-copy logo_copy"></i>
+                            <i class="fas fa-check-double check_copy"></i>
+                        </div>
+                    </span>
                 </span>
                 <span class="contact_info">
-                    <i class="far fa-envelope"></i>
-                    <h4 class="my_mail">manirakizablaise3@gmail.com</h4>
+                    <i class="far fa-envelope primary_logo"></i>
+                    <span class="my_mail">
+                        <h4>manirakizablaise3@gmail.com</h4>
+                        <div class="contener_logo_copy">
+                            <i class="fas fa-copy logo_copy"></i>
+                            <i class="fas fa-check-double check_copy"></i>
+                        </div>
+                    </span>
                 </span>
             </div>
             
@@ -163,23 +175,27 @@ function create_skills(tech_name, contener_skills) {
 
 create_skills(tech_name,contener_skills);
 
-const number=document.querySelector(".num_tel");
-const email=  document.querySelector(".my_mail");
-
+const number = document.querySelector(".num_tel");
+const email = document.querySelector(".my_mail");
+// const logo_copy = document.querySelector(".logo_copy");
+// const check_copy = document.querySelector(".check_copy");
 function copier_element (element){
     
     element.addEventListener("click",(e)=>{
-        let old_value =e.target.textContent;
+        let firstchild = element.firstElementChild;
+        let logo_copy = element.querySelector(".logo_copy");
+        let check_copy = element.querySelector(".check_copy");
+
+        let old_value = firstchild.textContent;
         navigator.clipboard.writeText(old_value);
-        element.innerText="Copie";
-        console.log(old_value);
+        logo_copy.style.display="none";
+        check_copy.style.display="initial";
         setTimeout(() => {
-            element.innerText=old_value;
+            logo_copy.style.display="";
+            check_copy.style.display="none";
         }, 1000);
     });
-    
 }
-
 copier_element(number);
 copier_element(email);
     </script>
