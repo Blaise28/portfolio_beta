@@ -117,12 +117,12 @@ body {
 }
 .contact_info {
   display: flex;
-  margin: 1.5rem 3rem 1.5rem;
+  margin: 2rem 3rem 1rem;
   align-items: center;
   line-height: 2;
   color: var(--black_nav);
 }
-.contact_info i {
+.contact_info .primary_logo {
   font-size: 1.7rem;
   color: #fff;
   background: var(--blue);
@@ -131,14 +131,38 @@ body {
 }
 .contact_info h4 {
   margin-left: 1rem;
-  font-family: serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
+  padding: 0.2rem 0.5rem;
+  border-bottom: 1px solid #fff;
 }
-.num_tel, 
-.my_mail{
+.contact_info .num_tel,
+.contact_info .my_mail {
   cursor: pointer;
-  letter-spacing: 2px;
-  border-bottom: 3px dotted var(--blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contener_logo_copy {
+  margin-left: 1.5rem;
+  font-size: 1.9rem;
+  background: #fff;
+  padding: 0 1rem;
+  box-shadow: 2px 2px 4px var(--blue);
+  transition: all 0.3s ease-in-out;
+}
+.contener_logo_copy:hover {
+  transform: rotate(13deg) scale(1.1);
+  box-shadow: 4px 5px 5px var(--blue);
+}
+.logo_copy {
+  color: var(--black_nav);
+}
+.check_copy {
+  color: var(--blue);
+  background: #fff;
+  display: none;
+  transition: all 0.2s ease-out;
 }
 .social {
   display: flex;
