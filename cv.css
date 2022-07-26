@@ -386,8 +386,7 @@ body {
   .titre {
     font-size: 2.2rem;
     padding: 1rem 5rem;
-    margin-bottom: 1rem;
-    margin: 0 auto;
+    margin: 0 auto 1rem;
     max-width: max-content;
   }
   .education .contenu {
