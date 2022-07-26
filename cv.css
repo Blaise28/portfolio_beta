@@ -129,12 +129,15 @@ body {
   padding: 0.5rem;
   border-radius: 50%;
 }
-.contact_info h4 {
+.contact_info h4,
+.my_mail a {
   margin-left: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
   padding: 0.2rem 0.5rem;
   border-bottom: 1px solid #fff;
+  color: var(--black_nav);
+  font-weight: 600;
 }
 .contact_info .num_tel,
 .contact_info .my_mail {
@@ -149,7 +152,6 @@ body {
   background: #fff;
   padding: 0 1rem;
   box-shadow: 2px 2px 4px var(--blue);
-  transition: all 0.3s ease-in-out;
 }
 .contener_logo_copy:hover {
   transform: rotate(13deg) scale(1.1);
