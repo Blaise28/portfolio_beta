@@ -129,8 +129,7 @@ body {
   padding: 0.5rem;
   border-radius: 50%;
 }
-.contact_info h4,
-.my_mail a {
+.contact_info .contact {
   margin-left: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
@@ -152,10 +151,6 @@ body {
   background: #fff;
   padding: 0 1rem;
   box-shadow: 2px 2px 4px var(--blue);
-}
-.contener_logo_copy:hover {
-  transform: rotate(13deg) scale(1.1);
-  box-shadow: 4px 5px 5px var(--blue);
 }
 .logo_copy {
   color: var(--black_nav);
