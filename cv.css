@@ -186,6 +186,7 @@ body {
   overflow: hidden;
   margin-top: 2rem;
   border-radius: 5px;
+  font-weight: bolder;
 }
 .btn_download a {
   font-size: 3rem;
